@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>《数字媒体技术》期末大作业</title>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+				font-family: arial;
+			}
+
+			#blocker {
+
+				position: absolute;
+
+				width: 100%;
+				height: 100%;
+
+				background-color: rgba(0,0,0,0.5);
+
+			}
+
+			#instructions {
+
+				width: 100%;
+				height: 100%;
+
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+
+				-webkit-box-orient: horizontal;
+				-moz-box-orient: horizontal;
+				box-orient: horizontal;
+
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				box-pack: center;
+
+				-webkit-box-align: center;
+				-moz-box-align: center;
+				box-align: center;
+
+				color: #ffffff;
+				text-align: center;
+
+				cursor: pointer;
+
+			}
+			.testInfo{width:100%;height:25px;}
+			.info{
+				width:100%;}
+			.fudong{ 
+				position:absolute;  
+	            width:500px;  
+	            height:auto;  
+	            opacity: 0.8;
+	            color:white; 
+	            font-size:14pt; 
+	            font-weight: bold;
+	            top:10px;
+	            margin-left: 10px;    
+
+	        }
+	        .zhunxing{
+	        	position:absolute;  
+	            width:100%;  
+	            height:100px;  
+	            opacity: 1;
+	            color:#000000; 
+	            font-size: 26pt;
+	            line-height:100px;  
+	            text-align:center;
+	            top:50%;margin-top: -50px;
+	        }
+	        .myvideo{
+	        	position:absolute;
+	            width:45%;
+	            opacity: 0.05;
+	            color:#000000;
+	            font-size: 26pt;
+	            text-align:center;
+	            top:10px;
+	            right:10px;
+	            z-index: 5;
+	        }
+
+		</style>
+	</head>
+	<body onclick="playVideo();">
+		<div class="fudong">
+			<div class="info">说明：<br>
+			单击进入场景<br>
+			esc 退出<br/>
+			w/向上:前进;<br>
+			s/向下:后退<br>
+			a/向左:往左走<br>
+			d/向右:往右走<br>
+			鼠标控制视野<br>
+			靠近笔记本，准星单击笔记本电脑，会弹出视频，<br>再次单击笔记本关闭(在chrome下有效)</div>
+			<div id="fpsInfo" class="info"></div>	
+			<div id="info1" class="info"></div>
+			<div id="info2" class="info"></div>
+			<div id="info3" class="info"></div>
+			<div id="info4" class="info"></div>
+			<div id="info5" class="info"></div>	
+			<div id="info6" class="info"></div>
+			<div id="info7" class="info"></div>
+			<div id="info8" class="info"></div>	
+			<div id="Notice" class="info"></div>		
+		</div>
+		<div class="zhunxing" id="zhunxing">+</div>
+		<div class="myvideo" id="myVideo"></div>		
+		<div id="blocker">
+			<div id="instructions">
+				<span style="font-size:30px">《数字媒体技术》期末project:可交互的虚拟场景展示系统,请使用chrome浏览器</span><br>
+					单击进入场景<br>
+					esc 退出<br/>
+					w/向上:前进;<br>
+					s/向下:后退<br>
+					a/向左:往左走<br>
+					d/向右:往右走<br>
+					鼠标控制视野<br>
+			</div>
+
+		</div>
+		<!--<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>-->
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/three.min.js"></script>	
+		<script src="js/PointerLockControls.js"></script>
+		<script src="js/smmain.js"></script>	
+	</body>
+</html>
